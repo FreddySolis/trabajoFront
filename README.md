@@ -1,4 +1,4 @@
-# front
+# joinder-vue-test
 
 ## Project setup
 ```

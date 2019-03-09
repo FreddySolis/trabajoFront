@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">  
+    <navbar-guest v-if="validacion=='no'"></navbar-guest>   
+    <navbar-user v-else></navbar-user>  
+ 
+    <router-view></router-view>   
+<dev></dev>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import footer from './components/footer.vue'
+import NavbarUser from './components/Navbar/NavbarUser.vue'
+import NavbarGuest from './components/Navbar/NavbarGuest.vue'
 export default {
-  name: 'app',
+  
+  name: 'App',
   components: {
-    HelloWorld
+    dev:footer,
+    NavbarUser,
+    NavbarGuest
+  },
+  data () {
+    return {
+      validacion:'no'
+    }
+  },
+  created(){
+      if(this.$auth.getToken()==null){
+      }else{
+        this.validacion=this.$auth.getToken();
+      }
+  },
+  updated(){
+      if(this.$auth.getToken()==null){
+this.validacion='no';
+      }else{
+        this.validacion=this.$auth.getToken();
+      }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
