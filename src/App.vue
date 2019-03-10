@@ -1,10 +1,10 @@
 <template>
   <div id="app">  
-    <navbar-guest v-if="validacion=='no'"></navbar-guest>   
-    <navbar-user v-else></navbar-user>  
+    <!-- <navbar-guest v-if="validacion=='no'"></navbar-guest>    -->
+    <!-- <navbar-user v-else></navbar-user>   -->
  
     <router-view></router-view>   
-<dev></dev>
+<!-- <dev></dev> -->
   </div>
 </template>
 

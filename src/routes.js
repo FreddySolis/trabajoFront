@@ -14,6 +14,10 @@ import Edprofile from './components/Edprofile.vue'
 import FindQuestion from './components/question/FindQuestion.vue'
 import FindMateria from './components/FindMateria.vue'
 
+// ---------------------------------------------------------------------------
+
+import Preview from './components/producto/Preview.vue'
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -96,6 +100,13 @@ const router = new VueRouter({
             component:FindMateria,
             meta:{
                 forAuth:true
+            }
+        },
+        {
+            path:"/test123",
+            component:Preview,
+            meta:{
+                forAuth:false
             }
         },
     ]
