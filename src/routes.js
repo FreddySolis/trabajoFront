@@ -17,7 +17,11 @@ import FindMateria from './components/FindMateria.vue'
 // ---------------------------------------------------------------------------
 
 import Preview from './components/producto/Preview.vue'
+<<<<<<< HEAD
 import Profile2 from './components/profile/Profile.vue'
+=======
+import Single from './components/producto/Single.vue'
+>>>>>>> 78c6706870436abbd3a0575c3021e32ccee225e6
 
 Vue.use(VueRouter)
 
@@ -106,12 +110,19 @@ const router = new VueRouter({
             }
         },
         {
+            path:"/producto/:id",
+            component:Single,
+            meta:{
+                forAuth:false
+            }
+        },
+        {
             path:"/profile",
             component:Profile2,
             meta:{
                 forAuth:false
             }
-        },
+        }
         
     ]
 });

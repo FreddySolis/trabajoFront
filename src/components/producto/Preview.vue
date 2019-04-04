@@ -13,17 +13,18 @@
           <v-layout row wrap>
             <v-flex
               v-for="card in cards"
-              :key="card.title"
+              :key="card.id"
               v-bind="{ [`xs${card.flex}`]: true }"
             >
               <v-card
-              href="aquivaelenlace"
               color="black"
               >
+
+              <router-link :to="{ path: '/producto/'+card.id}">
                 <v-img
-                  :src="card.src"
+                  :src="card.imagen"                  
                   height="200px"
-                >
+                >              
                   <v-container
                     fill-height
                     fluid
@@ -31,23 +32,33 @@
                   >
                     <v-layout fill-height>
                       <v-flex xs12 align-end flexbox>
-                        <span class="headline white--text oscurecer" v-text="card.title+' - $'+card.price"></span>
+                        <span class="headline white--text oscurecer" v-text="card.producto+' - $'+card.precio"></span>
                       </v-flex>
                     </v-layout>
                   </v-container>
                 </v-img>
+              </router-link>
 
                 <v-card-actions>                  
-                  <v-spacer></v-spacer>                  
-                  <v-btn icon>                    
-                    <i class="fas fa-dollar-sign" style="font-size:20px; color:white"></i>
-                  </v-btn>
+                  <v-spacer></v-spacer>                            
+
+                    <router-link :to="{ path: '/comprar/'+card.id}">   
+                    <v-btn icon>                    
+                      <i class="fas fa-dollar-sign" style="font-size:20px; color:white"></i>
+                    </v-btn>
+                    </router-link>
+
+                  <router-link :to="{ path: '/perfil/'+card.id}">
                   <v-btn icon>
                     <i class="fas fa-user" style="font-size:20px; color:white"></i>
                   </v-btn>
+                  </router-link>
+
+                  <router-link :to="{ path: '/agregar/'+card.id}">
                   <v-btn icon>
                     <i class="fas fa-cart-plus" style="font-size:20px; color:white"></i>
                   </v-btn>
+                  </router-link>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -62,12 +73,13 @@
   export default {
     data(){
       return{
-
+        cards:{}
       }
     },
     created(){
-      this.$http.get("api/producto").then((response) => {
+      this.$http.get("producto").then((response) => {
         console.log(response)
+        this.cards=response.body
       })
     }
   }

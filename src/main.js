@@ -17,8 +17,10 @@ Vue.use(Auth)
 
 
 // Ruta del endpoint
-Vue.http.options.root="http://localhost:8000"
+Vue.http.options.root="http://127.0.0.1:8000/api"
 Vue.http.headers.common['Authorization'] = 'Bearer ' + Vue.auth.getToken()
+Vue.http.headers.common['Access-Control-Allow-Origin'] = '*'
+
 
 Router.beforeEach(
   (to,from,next) =>{    
