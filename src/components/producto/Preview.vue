@@ -62,11 +62,11 @@
   export default {
     data(){
       return{
-
+        cards:{}
       }
     },
     created(){
-      this.$http.get("api/producto").then((response) => {
+      this.$http.get("producto").then((response) => {
         console.log(response)
       })
     }
