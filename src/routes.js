@@ -3,13 +3,15 @@ import VueRouter from 'vue-router'
 import Login from './components/authentication/Login.vue'
 import Register from './components/authentication/Register.vue'
 import NavbarUser from './components/Navbar/NavbarUser.vue'
-import Profile from './components/Profile.vue'
+
 import Edprofile from './components/Edprofile.vue'
 
 
 // ---------------------------------------------------------------------------
 
 import Preview from './components/producto/Preview.vue'
+import Profile2 from './components/profile/Profile.vue'
+
 import Single from './components/producto/Single.vue'
 
 Vue.use(VueRouter)
@@ -39,11 +41,6 @@ const router = new VueRouter({
         },
         
         {
-            path:"/profile",
-            component:Profile,
-      
-        },
-        {
             path:"/editprofile",
             component:Edprofile,
       
@@ -63,6 +60,14 @@ const router = new VueRouter({
                 forAuth:false
             }
         },
+        {
+            path:"/profile",
+            component:Profile2,
+            meta:{
+                forAuth:false
+            }
+        }
+        
     ]
 });
 

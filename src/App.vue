@@ -1,8 +1,7 @@
 <template>
   <div id="app">  
-    <!-- <navbar-guest v-if="validacion=='no'"></navbar-guest>    -->
+    <navbar-guest></navbar-guest>
     <!-- <navbar-user v-else></navbar-user>   -->
- 
     <router-view></router-view>   
 <!-- <dev></dev> -->
   </div>
@@ -13,6 +12,7 @@
 import footer from './components/footer.vue'
 import NavbarUser from './components/Navbar/NavbarUser.vue'
 import NavbarGuest from './components/Navbar/NavbarGuest.vue'
+import Navbar from './components/Navbar/Navbar.vue'
 export default {
   
   name: 'App',
