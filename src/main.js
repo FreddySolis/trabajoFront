@@ -28,7 +28,7 @@ Router.beforeEach(
       console.log('Para visitantes')
       if(Vue.auth.isAuthenticated()){
         console.log('Autenticado no debe ver vistas de visitantes')
-        next('/feed')
+        next('/producto')
       }
       else{
         next()

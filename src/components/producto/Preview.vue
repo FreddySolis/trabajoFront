@@ -77,7 +77,7 @@
       }
     },
     created(){
-      this.$http.get("producto").then((response) => {
+      this.$http.get("api/producto").then((response) => {
         console.log(response)
         this.cards=response.body
       })

@@ -32,7 +32,7 @@ export default {
         }
     },
     created(){
-        this.$http.get("producto/"+this.$route.params.id).then((response) => {
+        this.$http.get("api/producto/"+this.$route.params.id).then((response) => {
             this.producto=response.body
         })
     }
