@@ -17,6 +17,7 @@ import FindMateria from './components/FindMateria.vue'
 // ---------------------------------------------------------------------------
 
 import Preview from './components/producto/Preview.vue'
+import Profile2 from './components/profile/Profile.vue'
 
 Vue.use(VueRouter)
 
@@ -69,11 +70,6 @@ const router = new VueRouter({
             }
         },
         {
-            path:"/profile",
-            component:Profile,
-      
-        },
-        {
             path:"/editprofile",
             component:Edprofile,
       
@@ -109,6 +105,14 @@ const router = new VueRouter({
                 forAuth:false
             }
         },
+        {
+            path:"/profile",
+            component:Profile2,
+            meta:{
+                forAuth:false
+            }
+        },
+        
     ]
 });
 

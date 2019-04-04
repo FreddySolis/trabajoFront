@@ -1,17 +1,18 @@
 <template>
 
+
 <div>
-<center><div class="container ">
+<div class="container ">
         
             <form method=""  >
                   {{findInfo(this.$auth.getUserId())}}
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img id="" class="" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" style="position:absolute;
-        left:27%;
-        width:150px;
-        height:150px;
+                            <img id="" class="" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" style="
+        margin-left:auto;
+        margin-right:auto;
+        
         border-radius:150px;
         border:6px solid #666;" /> <br>
                             </div>
@@ -106,7 +107,7 @@
                     </div>
                 </div>
             </form>           
-        </div></center> 
+        </div>
 
 </div>
     
