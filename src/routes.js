@@ -103,7 +103,7 @@ const router = new VueRouter({
             }
         },
         {
-            path:"/test123",
+            path:"/producto",
             component:Preview,
             meta:{
                 forAuth:false

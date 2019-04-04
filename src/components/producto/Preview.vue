@@ -60,15 +60,16 @@
 
 <script>
   export default {
-    data: () => ({
-      cards: [        
-        { title: 'Xbox One', src: 'https://i.blogs.es/d2a441/xboxonex/450_1000.jpg', flex: 4, price:'1234'},
-        { title: 'Playstation 4', src: 'https://i.blogs.es/94688b/playstation-4/450_1000.jpg', flex: 4, price:'1234' },
-        { title: '1000 Pavos Fortnite', src: 'https://cdn140.picsart.com/264940182007212.png?r1024x1024', flex: 4, price:'1234' },
-        { title: 'Minecraft Premium', src: 'https://www.tecnogaming.com/wp-content/uploads/2016/09/minecraft-featured.jpg', flex: 4, price:'1234' },
-        { title: 'Monas Chinas', src: 'https://i.ytimg.com/vi/2yaZx772Nh8/maxresdefault.jpg', flex: 4, price:'1234' }
-      ]
-    })
+    data(){
+      return{
+
+      }
+    },
+    created(){
+      this.$http.get("api/producto").then((response) => {
+        console.log(response)
+      })
+    }
   }
 </script>
 
