@@ -17,6 +17,7 @@ import FindMateria from './components/FindMateria.vue'
 // ---------------------------------------------------------------------------
 
 import Preview from './components/producto/Preview.vue'
+import Single from './components/producto/Single.vue'
 
 Vue.use(VueRouter)
 
@@ -105,6 +106,13 @@ const router = new VueRouter({
         {
             path:"/producto",
             component:Preview,
+            meta:{
+                forAuth:false
+            }
+        },
+        {
+            path:"/producto/:id",
+            component:Single,
             meta:{
                 forAuth:false
             }
