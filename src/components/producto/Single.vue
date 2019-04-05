@@ -19,7 +19,7 @@
               <button class="btn btn-success">Comprar   <i class="fas fa-dollar-sign" style="font-size:20px; color:white"></i></button>        
           </div>
           <div style="margin:5px;" class="col col-sm-2">
-              <button class="btn btn-info">Agregar al Carrito <i class="fas fa-cart-plus" style="font-size:20px; color:white"></i></button>          
+              <button @click="add(producto)" class="btn btn-info">Agregar al Carrito<i class="fas fa-cart-plus" style="font-size:20px; color:white"></i></button>          
           </div>
           <div class="col col-sm-4"></div>  
       </div>
@@ -32,14 +32,41 @@
 export default {
     data(){
         return{
-            producto :{}
+            producto :{},
+            datos:[],
+
         }
     },
     created(){
+                 var Header = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + this.$auth.getToken()
+      }
+    };
         this.$http.get("api/producto/"+this.$route.params.id).then((response) => {
             this.producto=response.body
             console.log(response.body)
         })
+    },
+    methods:{
+        add(produc){
+            if(this.$auth.isAuthenticated() == true){
+            datos = {
+                id_producto:product.id,
+                id_usuario:this.$auth.getUserId(),
+                cantidad:"1",
+                total:produc.precio,
+            }
+            
+            this.$http.post("api/newCarrito",datos,this.Header).then((response) =>{
+                alert("Se agrego al carrito")
+            });
+            }
+            else{
+                alert("Inicia secion para agregar algo al carrtio")
+            }
+        }
     }
 };
 </script>

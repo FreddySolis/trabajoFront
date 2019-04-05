@@ -56,11 +56,9 @@
                   </v-btn>
                   </router-link> -->
 
-                  <router-link :to="{ path: '/agregar/'+card.id}">
-                  <v-btn icon>
+                  <v-btn v-on:click="add(card)" icon>
                     <i class="fas fa-cart-plus" style="font-size:20px; color:white"></i>
                   </v-btn>
-                  </router-link>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -75,7 +73,13 @@
   export default {
     data(){
       return{
-        cards:{}
+        cards:{},
+        datos:[],
+        id_producto:"",
+        id_usuario:"",
+        cantidad:"",
+        total:"",
+
       }
     },
     created(){
@@ -83,6 +87,27 @@
         console.log(response)
         this.cards=response.body
       })
+    },
+    methods: {
+       add(card){
+         if(this.$auth.isAuthenticated()){
+            this.datos = {
+                id_producto:card.id,
+                id_usuario:this.$auth.getUserId(),
+                cantidad:"1",
+                total:card.precio,
+
+            }
+            
+            this.$http.post("api/newCarrito",this.datos,this.Header).then((response) =>{
+                alert("Se agrego al carrito")
+            });
+         }
+         else{
+           alert("Inicia secion para agregar algo al carrtio")
+         }
+            
+        }
     }
   }
 </script>
