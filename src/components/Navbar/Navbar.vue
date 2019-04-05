@@ -4,7 +4,7 @@
 
   <nav class="navbar navbar-dark bg-primary">
     <router-link :to="{ path: '/'}">
-  <button class="navbar-brand">G2A Azul</button>
+  <button class="navbar-brand">Gamer Style</button>
   </router-link> 
   <form  class="form-inline">
                <router-link :to="{ path: '/profile'}">

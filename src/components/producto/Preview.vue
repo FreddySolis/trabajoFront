@@ -22,7 +22,7 @@
 
               <router-link :to="{ path: '/producto-'+card.id}">
                 <v-img
-                  :src="card.imagen"                  
+                  :src="require('../../assets/'+card.id+'.jpg')"                  
                   height="200px"
                 >              
                   <v-container
