@@ -64,7 +64,7 @@ export default {
             });
             }
             else{
-                alert("Inicia secion para agregar algo al carrtio")
+                alert("Inicia sesion para agregar algo al carrtio")
             }
         }
     }
