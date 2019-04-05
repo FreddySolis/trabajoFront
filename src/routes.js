@@ -56,7 +56,7 @@ const router = new VueRouter({
             }
         },
         {
-            path:"/producto/:id",
+            path:"/producto-:id",
             component:Single,
             meta:{
                 forAuth:false
