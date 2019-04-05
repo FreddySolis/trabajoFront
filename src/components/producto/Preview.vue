@@ -32,7 +32,7 @@
                   >
                     <v-layout fill-height>
                       <v-flex xs12 align-end flexbox>
-                        <span class="headline white--text oscurecer" v-text="card.producto+' - $'+card.precio"></span>
+                        <span style="color:blue;" class="headline oscurecer" v-text="card.producto+' - $'+card.precio"></span>
                       </v-flex>
                     </v-layout>
                   </v-container>
