@@ -4,7 +4,7 @@
       <div class="container">
       <div class="row">
           <div class="col col-sm-6">
-              <v-img :src="producto.imagen"></v-img>
+              <v-img :src="require('../../assets/'+producto.id+'.jpg')"></v-img>
           </div>
       
           <div class="col col-sm-6 text-center" style="color:white;">
@@ -40,6 +40,7 @@ export default {
     created(){
         this.$http.get("api/producto/"+this.$route.params.id).then((response) => {
             this.producto=response.body
+            console.log(response.body)
         })
     }
 };
