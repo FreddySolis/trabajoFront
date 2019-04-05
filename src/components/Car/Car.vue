@@ -39,27 +39,6 @@
                 </v-img>
               </router-link>
 
-                <v-card-actions>                  
-                  <v-spacer></v-spacer>                            
-
-                    <router-link :to="{ path: '/comprar/'+card.id}">   
-                    <v-btn icon>                    
-                      <i class="fas fa-dollar-sign" style="font-size:20px; color:white"></i>
-                    </v-btn>
-                    </router-link>
-
-                  <router-link :to="{ path: '/perfil/'+card.id}">
-                  <v-btn icon>
-                    <i class="fas fa-user" style="font-size:20px; color:white"></i>
-                  </v-btn>
-                  </router-link>
-
-                  <router-link :to="{ path: '/agregar/'+card.id}">
-                  <v-btn icon>
-                    <i class="fas fa-cart-plus" style="font-size:20px; color:white"></i>
-                  </v-btn>
-                  </router-link>
-                </v-card-actions>
               </v-card>
             </v-flex>
           </v-layout>
@@ -77,7 +56,7 @@
       }
     },
     created(){
-      this.$http.get("api/producto").then((response) => {
+      this.$http.get("api/carrito/" + this.$auth.getUserId()).then((response) => {
         console.log(response)
         this.cards=response.body
       })

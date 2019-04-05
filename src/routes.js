@@ -14,6 +14,8 @@ import Profile2 from './components/profile/Profile.vue'
 
 import Single from './components/producto/Single.vue'
 
+import addTarjeta from './components/profile/addCard.vue'
+import Car from './components/Car/Car.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -63,6 +65,20 @@ const router = new VueRouter({
         {
             path:"/profile",
             component:Profile2,
+            meta:{
+                forAuth:false
+            }
+        },
+        {
+            path:"/addTarjeta/:id",
+            component:addTarjeta,
+            meta:{
+                forAuth:false
+            }
+        },
+        {
+            path:"/Car",
+            component:Car,
             meta:{
                 forAuth:false
             }
