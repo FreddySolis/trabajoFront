@@ -20,7 +20,7 @@
               color="black"
               >
 
-              <router-link :to="{ path: '/producto/'+card.id}">
+              <router-link :to="{ path: '/producto-'+card.id}">
                 <v-img
                   :src="card.imagen"                  
                   height="200px"
@@ -48,11 +48,11 @@
                     </v-btn>
                     </router-link>
 
-                  <router-link :to="{ path: '/perfil/'+card.id}">
+                  <!-- <router-link :to="{ path: '/perfil/'+card.id}">
                   <v-btn icon>
                     <i class="fas fa-user" style="font-size:20px; color:white"></i>
                   </v-btn>
-                  </router-link>
+                  </router-link> -->
 
                   <router-link :to="{ path: '/agregar/'+card.id}">
                   <v-btn icon>
@@ -77,7 +77,7 @@
       }
     },
     created(){
-      this.$http.get("producto").then((response) => {
+      this.$http.get("api/producto").then((response) => {
         console.log(response)
         this.cards=response.body
       })
