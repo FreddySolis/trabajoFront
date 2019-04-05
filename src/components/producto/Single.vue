@@ -1,4 +1,3 @@
-
 <template>
   <div style="background-color:black;">
       <div class="container">
@@ -30,7 +29,6 @@
 </template>
 
 <script>
-
 export default {
     data(){
         return{
@@ -38,10 +36,13 @@ export default {
         }
     },
     created(){
-        this.$http.get("api/producto/"+this.$route.params.id).then((response) => {
+        this.$http.get("producto/"+this.$route.params.id).then((response) => {
             this.producto=response.body
             console.log(response.body)
         })
     }
 };
 </script>
+
+<style scoped>
+</style>
