@@ -12,8 +12,8 @@
         <div class="col-md-6 mt-md-0 mt-3">
 
           <!-- Content -->
-          <h5 class="text-uppercase">G2A Azul</h5>
-          <p>compra los juegos que quieras o imaginalo porque igual ni se puede comprar.</p>
+          <h5 class="text-uppercase">GamerStyle</h5>
+          <p>compra los juegos que quieras.</p>
 
         </div>
         <!-- Grid column -->
@@ -29,7 +29,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2019 Copyright:
-      <a href="http:localhost:8080/login"> G2A Azul.com</a>
+      <a href="http:localhost:8080/login">GamerStyle.com</a>
     </div>
     <!-- Copyright -->
 
