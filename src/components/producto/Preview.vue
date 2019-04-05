@@ -4,7 +4,7 @@
     <v-flex xs12 sm12 md12>
 
       <v-card 
-      color="light-blue darken-1"      
+      color=" darken-1"      
       > 
         <v-container
           fluid

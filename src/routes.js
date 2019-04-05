@@ -49,7 +49,7 @@ const router = new VueRouter({
         },
     
         {
-            path:"/producto",
+            path:"/",
             component:Preview,
             meta:{
                 forAuth:false
@@ -80,7 +80,7 @@ const router = new VueRouter({
             path:"/Car",
             component:Car,
             meta:{
-                forAuth:false
+                forAuth:true
             }
         }
         
