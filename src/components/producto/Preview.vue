@@ -32,11 +32,13 @@
                   >
                     <v-layout fill-height>
                       <v-flex xs12 align-end flexbox>
-                        <span style="color:blue;" class="headline oscurecer" v-text="card.producto+' - $'+card.precio"></span>
+                        
                       </v-flex>
                     </v-layout>
                   </v-container>
+                  
                 </v-img>
+                <span style="color:white; font-weight: bold;" class="headline oscurecer" v-text="card.producto+' - $'+card.precio"></span>
               </router-link>
 
                 <v-card-actions>                  
