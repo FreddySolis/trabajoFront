@@ -50,16 +50,16 @@ export default {
         })
     },
     methods:{
-        add(produc){
+        add(producto){
             if(this.$auth.isAuthenticated() == true){
-            datos = {
-                id_producto:product.id,
+            this.datos = {
+                id_producto:producto.id,
                 id_usuario:this.$auth.getUserId(),
                 cantidad:"1",
-                total:produc.precio,
+                total:producto.precio,
             }
             
-            this.$http.post("api/newCarrito",datos,this.Header).then((response) =>{
+            this.$http.post("api/newCarrito",this.datos,this.Header).then((response) =>{
                 alert("Se agrego al carrito")
             });
             }
