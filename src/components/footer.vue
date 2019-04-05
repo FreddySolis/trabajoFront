@@ -1,37 +1,38 @@
 <template>
-  <v-footer dark height="auto">
-    <v-card class="flex" flat tile>
-      <v-card-title class="teal">
-        <strong class="subheading">Get connected with us on social networks!</strong>
+    <!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
 
-        <v-spacer></v-spacer>
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
 
-        <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
-          <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
-      </v-card-title>
+      <!-- Grid row -->
+      <div class="row">
 
-      <v-card-actions class="grey darken-3 justify-center">
-        &copy;2018 —
-        <strong>QuestionForDummies</strong>
-      </v-card-actions>
-    </v-card>
-  </v-footer>
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">GamerStyle</h5>
+          <p>compra los juegos que quieras.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="http:localhost:8080/login">GamerStyle.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 </template>
-
-<script>
-export default {
-  data: () => ({
-    icons: [
-      "fab fa-facebook",
-      "fab fa-twitter",
-      "fab fa-google-plus",
-      "fab fa-linkedin",
-      "fab fa-instagram"
-    ]
-  })
-};
-</script>
-
-<style>
-</style>

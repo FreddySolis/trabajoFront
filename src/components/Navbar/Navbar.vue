@@ -1,9 +1,18 @@
 <template>
-  <nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand">Navbar</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+<div style="  position: sticky;top: 0;">
+
+
+  <nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand">Gamer Style</a>
+  <form  class="form-inline">
+               <router-link :to="{ path: '/profile'}">
+                   <button  class="btn btn-outline-dark btn-lg"><i class="fas fa-user"></i></button>               
+          </router-link>  
+          <router-link :to="{ path: '/Car'}">
+                   <button  class="btn btn-outline-dark btn-lg"><i class="fas fa-shopping-cart"></i></button>               
+          </router-link> 
   </form>
+
 </nav>
+</div>
 </template>
