@@ -66,7 +66,7 @@ const router = new VueRouter({
             path:"/profile",
             component:Profile2,
             meta:{
-                forAuth:false
+                forAuth:true
             }
         },
         {

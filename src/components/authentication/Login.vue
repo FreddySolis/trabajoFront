@@ -90,7 +90,7 @@ var Header = {
         this.$http.get("api/userid/"+this.email).then(response =>{         
           console.log(response)
             this.$auth.setUserId(response.body[0].id)            
-             this.$router.push("/producto")
+             this.$router.push("/")
           })     
       })
     },

@@ -35,9 +35,9 @@ Router.beforeEach(
       }
     }
     else if(to.matched.some(record => record.meta.forAuth)){
-      console.log('Para autenticados')
+     
       if(!Vue.auth.isAuthenticated()){    
-        console.log('No autenticado no debe ver vistas de usuarios')    
+        alert('Debes iniciar sesión primero')    
         next('/login')
       }
       else{
